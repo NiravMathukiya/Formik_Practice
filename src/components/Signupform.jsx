@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useFormik } from 'formik';
-import { ReactFilesPreview } from 'react-files-preview';
-import 'react-files-preview/dist/style.css';
+
 
 const SignupForm = () => {
     const [imagePreview, setImagePreview] = useState(null);
@@ -130,22 +129,9 @@ const SignupForm = () => {
                 />
 
                 <label htmlFor="image">Profile Image</label>
-                <div className='text-center h-24 mb-24 p-0'>
-                    <ReactFilesPreview
-                        onChange={handleImageChange} // Handle image change
-                        width="30px"
-                        height="20px"
-                        fileWidth="w-18"
-                        maxFiles={1} // Limit to one file
-                        fileHeight="h-16"
-                        multiple={false} // Single file only
-                        showSliderCount={false} // Hide slider count
-                        showAddMore={false} // Hide "Add more" button
-                        showRemoveIcon={true} 
-                        showFileSize={false}// Show remove icon to delete the selected file if needed
-                    />
-                </div>
 
+                {/* {image here } */}
+               
                 <label htmlFor="username">Username</label>
                 <input
                     type="text"
